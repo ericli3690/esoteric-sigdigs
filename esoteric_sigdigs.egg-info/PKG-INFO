@@ -1,3 +1,17 @@
+Metadata-Version: 2.1
+Name: esoteric-sigdigs
+Version: 0.1.2
+Summary: A Python package that detects and rounds numbers to significant digits.
+Home-page: https://github.com/ericli3690/esoteric-sigdigs/
+Author: Eric Li
+Author-email: ericli3690@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 # esoteric-sigdigs
 **🐍 A Python package that detects and rounds numbers to significant digits.**
 
@@ -5,14 +19,9 @@ This package aims to provide easy-to-use functions to work with significant digi
 
 ⚠ Please note that this package is almost certainly laced with bugs, so use it at your own risk! Additionally, the significant digit rules used may not be exactly what you are looking for; I have designed this package to fit the likely-esoteric way I have been taught to use significant digits. Sorry! If you encounter any issues, please create an issue on GitHub (*https://github.com/ericli3690/esoteric-sigdigs*) or email me at *ericli3690@gmail.com*.
 
-## 🛠 Installation and Use
+## 🛠 Installation
 
 `>> pip install esoteric-sigdigs`
-
-```python
-from sigdigs import sigdigs
-sigdigs.function_name_here(arguments_here)
-```
 
 ## 🧪 What is Scientific Notation?
 
