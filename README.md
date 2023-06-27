@@ -1,9 +1,9 @@
 # esoteric-sigdigs
-## 🐍 A Python package that detects and rounds numbers to significant digits.
+**🐍 A Python package that detects and rounds numbers to significant digits.**
 
-Significant digits (also known as significant figures) help scientists communicate and understand how precise their results are. This package aims to provide easy-to-use functions to determine and round to significant digits.
+This package aims to provide easy-to-use functions to determine and round to significant digits (also known as significant figures).
 
-⚠ Please note that this package is almost certainly laced with bugs, so use it at your own risk! Additionally, the significant digit rules used may not be exactly what you are looking for; I have designed this package to fit the likely-esoteric way I have been taught to use significant digits. Sorry!
+⚠ Please note that this package is almost certainly laced with bugs, so use it at your own risk! Additionally, the significant digit rules used may not be exactly what you are looking for; I have designed this package to fit the likely-esoteric way I have been taught to use significant digits. Sorry! If you encounter any issues, please create an issue on GitHub (*https://github.com/ericli3690/esoteric-sigdigs*) or email me at *ericli3690@gmail.com*.
 
 ## Installation
 
@@ -37,8 +37,11 @@ Here are some more examples, shown in scientific notation while pretending that 
 ### 🟥 sigdigs(*vals:float) -> int
 
 Returns the number of significant digits given a number.
+
 Given a list of numbers, it returns the lowest significant digits number provided by any of the numbers in the list.
+
 Trailing zeros are considered significant.
+
 Zeros are considered to have one significant digit.
 
 **Examples:**
@@ -58,6 +61,7 @@ Zeros are considered to have one significant digit.
 ### 🟨 round_to_sigdigs(val:float, sig:int) -> str
 
 Rounds a float to an integer number of significant digits.
+
 Always returns answers in scientific notation.
 
 **Examples:**
@@ -73,8 +77,10 @@ Always returns answers in scientific notation.
 
 ### 🟩 scientific_to_standard(val:str) -> str:
 
-Converts a number in scientific notation to normal formatting, IF POSSIBLE
+Converts a number in scientific notation to normal formatting, IF POSSIBLE.
+
 Sometimes, converting to normal formatting would involve adding extra significant digits (ex. 1.2E3 cannot be rewritten as 1200, as this would involve adding two new significant digits).
+
 In these cases, this function will simply return the input.
 
 **Examples:**
@@ -91,6 +97,7 @@ In these cases, this function will simply return the input.
 ### 🟩 standard_to_scientific(val:float) -> str:
 
 The inverse of the above operation!
+
 Converts a float into scientific form.
 
 **Examples:**
@@ -106,8 +113,9 @@ Converts a float into scientific form.
 
 ### 🟦 round_to_sigdigs_and_standard_form_given_source(val:float, sigsource:list) -> str:
 
-This is a useful routine that I personally find useful.
-Imagine a calculation that is being performed...
+This is a common routine that I personally find useful.
+
+Imagine a calculation being performed...
 
 ```
 V = lwh
