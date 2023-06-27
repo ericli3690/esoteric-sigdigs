@@ -6,3 +6,5 @@ esoteric_sigdigs.egg-info/PKG-INFO
 esoteric_sigdigs.egg-info/SOURCES.txt
 esoteric_sigdigs.egg-info/dependency_links.txt
 esoteric_sigdigs.egg-info/top_level.txt
+sigdigs/__init__.py
+sigdigs/sigdigs.py
