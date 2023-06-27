@@ -1,17 +1,15 @@
 # esoteric-sigdigs
-### 🐍 A Python package that detects and rounds numbers to significant digits.
+## 🐍 A Python package that detects and rounds numbers to significant digits.
 
 Significant digits (also known as significant figures) help scientists communicate and understand how precise their results are. This package aims to provide easy-to-use functions to determine and round to significant digits.
 
 ⚠ Please note that this package is almost certainly laced with bugs, so use it at your own risk! Additionally, the significant digit rules used may not be exactly what you are looking for; I have designed this package to fit the likely-esoteric way I have been taught to use significant digits. Sorry!
 
----
-
-## installation
+## Installation
 
 `>> pip install esoteric-sigdigs`
 
-## what is scientific notation?
+## What is Scientific Notation?
 
 Scientific notation is often used by this package, a string formatting of numbers which takes the following form:
 
@@ -19,7 +17,7 @@ Scientific notation is often used by this package, a string formatting of number
 
 And which can be written in standard formatting as
 
-`a.bc * 10^f`
+`a.bcd * 10^f`
 
 It can be seen that f represents the exponent.
 
@@ -34,16 +32,16 @@ Here are some more examples, shown in scientific notation while pretending that 
 | `8`                         | `8E0`                       |
 | `100000000000`              | `1E11`                      |
 
-## functionality
+## Functionality
 
-### 🟥 sigdigs(*vals) -> int
+### 🟥 sigdigs(*vals:float) -> int
 
 Returns the number of significant digits given a number.
 Given a list of numbers, it returns the lowest significant digits number provided by any of the numbers in the list.
 Trailing zeros are considered significant.
 Zeros are considered to have one significant digit.
 
-Examples:
+**Examples:**
 
 | Input                                            | Output          |
 |--------------------------------------------------|-----------------|
@@ -62,7 +60,7 @@ Examples:
 Rounds a float to an integer number of significant digits.
 Always returns answers in scientific notation.
 
-Examples:
+**Examples:**
 
 | Value               | Sigdigs              | Output                |
 |---------------------|----------------------|-----------------------|
@@ -79,7 +77,7 @@ Converts a number in scientific notation to normal formatting, IF POSSIBLE
 Sometimes, converting to normal formatting would involve adding extra significant digits (ex. 1.2E3 cannot be rewritten as 1200, as this would involve adding two new significant digits).
 In these cases, this function will simply return the input.
 
-Examples:
+**Examples:**
 
 | Scientific Notation         | Standard Formatting         |
 |-----------------------------|-----------------------------|
@@ -95,7 +93,7 @@ Examples:
 The inverse of the above operation!
 Converts a float into scientific form.
 
-Examples:
+**Examples:**
 
 | Standard Formatting         | Scientific Notation         |
 |-----------------------------|-----------------------------|
@@ -119,7 +117,6 @@ w = 0.02345
 h = 10
 
 V = 11.725... but to how many significant digits?
-
 ```
 
 This routine uses *scientific_to_standard*, *round_to_sigdigs*, and *sigdigs* to solve this efficiently.
