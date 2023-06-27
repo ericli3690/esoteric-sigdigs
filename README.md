@@ -1,15 +1,15 @@
 # esoteric-sigdigs
 **🐍 A Python package that detects and rounds numbers to significant digits.**
 
-This package aims to provide easy-to-use functions to determine and round to significant digits (also known as significant figures).
+This package aims to provide easy-to-use functions to work with significant digits (also known as significant figures).
 
 ⚠ Please note that this package is almost certainly laced with bugs, so use it at your own risk! Additionally, the significant digit rules used may not be exactly what you are looking for; I have designed this package to fit the likely-esoteric way I have been taught to use significant digits. Sorry! If you encounter any issues, please create an issue on GitHub (*https://github.com/ericli3690/esoteric-sigdigs*) or email me at *ericli3690@gmail.com*.
 
-## Installation
+## 🛠 Installation
 
 `>> pip install esoteric-sigdigs`
 
-## What is Scientific Notation?
+## 🧪 What is Scientific Notation?
 
 Scientific notation is often used by this package, a string formatting of numbers which takes the following form:
 
@@ -28,17 +28,17 @@ Here are some more examples, shown in scientific notation while pretending that 
 | `123456`                    | `1.23456E5`                 |
 | `120000`                    | `1.2E5`                     |
 | `-0.0000056`                | `-5.6E-6`                   |
-| `10`                        | `1.0E1`                     |
+| `10`                        | `1E1`                       |
 | `8`                         | `8E0`                       |
 | `100000000000`              | `1E11`                      |
 
-## Functionality
+## ⚙ Functionality
 
 ### 🟥 sigdigs(*vals:float) -> int
 
-Returns the number of significant digits given a number.
+Returns the number of significant digits of a provided float.
 
-Given a list of numbers, it returns the lowest significant digits number provided by any of the numbers in the list.
+Given a list of numbers, it returns the lowest significant digits number provided by any of the floats in the list.
 
 Trailing zeros are considered significant.
 
@@ -72,7 +72,7 @@ Always returns answers in scientific notation.
 | `-8.33`             | `1`                  | `-8E0`                |
 | `0.0056`            | `1`                  | `6E-3`                |
 | `1234.5678`         | `2`                  | `1.2E3`               |
-| `0`                 | `9`                  | `0E0`                 |
+| `0`                 | `4`                  | `0E0`                 |
 | `0.000`             | `9`                  | `0E0`                 |
 
 ### 🟩 scientific_to_standard(val:str) -> str:
@@ -93,6 +93,7 @@ In these cases, this function will simply return the input.
 | `1.0E1`                     | `10`                        |
 | `8E0`                       | `8`                         |
 | `1E11`                      | `1E11`                      |
+| `0E0`                       | `0`                         |
 
 ### 🟩 standard_to_scientific(val:float) -> str:
 
@@ -110,6 +111,7 @@ Converts a float into scientific form.
 | `10`                        | `1.0E1`                     |
 | `8`                         | `8E0`                       |
 | `100000000000`              | `1.00000000000E11`          |
+| `0`                         | `0E0`                       |
 
 ### 🟦 round_to_sigdigs_and_standard_form_given_source(val:float, sigsource:list) -> str:
 
@@ -133,4 +135,4 @@ For example, for this question, to obtain V with proper significant digits:
 
 `round_to_sigdigs_and_standard_form_given_source(50.0 * 0.02345 * 10, [50.0, 0.02345, 10])`
 
-Which outputs "12", as expected.
+Which outputs `12`, as expected.
