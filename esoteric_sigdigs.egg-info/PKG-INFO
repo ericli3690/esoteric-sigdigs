@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: esoteric-sigdigs
-Version: 0.1.4
+Version: 0.1.5
 Summary: A Python package that detects and rounds numbers to significant digits.
 Home-page: https://github.com/ericli3690/esoteric-sigdigs/
 Author: Eric Li
@@ -24,8 +24,8 @@ This package aims to provide easy-to-use functions to work with significant digi
 `>> pip install esoteric-sigdigs`
 
 ```python
-from sigdigs import sigdigs
-sigdigs.function_name_here(arguments_here)
+from sigdigs import function_name_here
+function_name_here(arguments_here)
 ```
 
 ## 🧪 What is Scientific Notation?

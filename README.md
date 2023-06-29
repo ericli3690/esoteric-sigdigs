@@ -10,8 +10,8 @@ This package aims to provide easy-to-use functions to work with significant digi
 `>> pip install esoteric-sigdigs`
 
 ```python
-from sigdigs import sigdigs
-sigdigs.function_name_here(arguments_here)
+from sigdigs import function_name_here
+function_name_here(arguments_here)
 ```
 
 ## 🧪 What is Scientific Notation?
